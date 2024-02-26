@@ -79,6 +79,7 @@ body {
 }
 
 .sign-up__form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -92,12 +93,9 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 94%;
+  font-size: 1.2rem;
   font-weight: 700;
   color: hsl(234, 29%, 20%);
-}
-.email-label p {
-  margin: 0;
-  font-size: 1.2rem;
 }
 
 .email-input {
@@ -139,6 +137,11 @@ body {
 }
 
 .email--error {
+  position: absolute;
+  right: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
   display: none;
   color: hsl(4, 100%, 67%);
 }

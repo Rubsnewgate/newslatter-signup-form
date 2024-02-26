@@ -63,8 +63,7 @@ body {
   height: 20px;
 }
 
-.email-label p {
-  margin: 0;
+.email-label {
   font-size: 1.6rem;
 }
 
@@ -75,6 +74,10 @@ body {
 
 .submit-btn {
   height: 55px;
+  font-size: 1.6rem;
+}
+
+.email--error {
   font-size: 1.6rem;
 }
 

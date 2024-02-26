@@ -43,17 +43,15 @@
 	height: 15px;
 }
 .sign-up__form {
+	position: relative;
 	@include flexbox(column, start, start, 10px);
 }
 .email-label {
 	@include flexbox(row, space-between, center, null);
 	width: 94%;
+	font-size: $list-size;
 	font-weight: $bold;
 	color: $dark-slate-grey;
-	p {
-		margin: 0;
-		font-size: $list-size;
-	}
 }
 .email-input {
 	width: 95%;
@@ -95,6 +93,11 @@
 
 // Email Error Message
 .email--error {
+	position: absolute;
+	right: 20px;
+	margin: 0;
+	font-size: $list-size;
+	font-weight: $bold;
 	display: none;
 	color: $tomato;
 }
