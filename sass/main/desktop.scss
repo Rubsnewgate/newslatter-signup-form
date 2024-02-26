@@ -1,0 +1,116 @@
+@import '../guide.scss';
+
+// Main Container
+.main-wrapper {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	width: 650px;
+	height: 450px;
+	padding: 20px;
+	font-family: $primary-font;
+	background-color: $white;
+	border-radius: 20px;
+}
+
+// SignUp Section
+.sign-up {
+	@include flexbox(column, center, null, 20px);
+	padding-left: 20px;
+}
+.sign-up__title {
+	margin: 0;
+	font-size: $lg-size;
+	color: $dark-slate-grey;
+}
+.sign-up__description {
+	margin: 0;
+	font-size: $sm-size;
+	color: $charcoal-grey;
+}
+.sign-up__benefits-list {
+	@include flexbox(column, start, start, 10px);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list-item {
+	@include flexbox(row, start, center, 10px);
+	font-size: $list-size;
+	color: $charcoal-grey;
+}
+.list-icon {
+	width: 15px;
+	height: 15px;
+}
+.sign-up__form {
+	@include flexbox(column, start, start, 10px);
+}
+.email-label {
+	@include flexbox(row, space-between, center, null);
+	width: 94%;
+	font-weight: $bold;
+	color: $dark-slate-grey;
+	p {
+		margin: 0;
+		font-size: $list-size;
+	}
+}
+.email-input {
+	width: 95%;
+	height: 40px;
+	padding: 5px 10px;
+	border: 1px solid $grey;
+	border-radius: 5px;
+	outline: none;
+	&:focus {
+		border: 1px solid #000;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+.submit-btn {
+	width: 95%;
+	height: 40px;
+	margin-top: 10px;
+	font-weight: $bold;
+	color: $white;
+	background-color: $dark-slate-grey;
+	border: none;
+	border-radius: 5px;
+	&:hover {
+		cursor: pointer;
+		background: linear-gradient(to right, #ff586a, rgb(255, 108, 91), $tomato);
+		box-shadow: 0 8px 10px rgba(255, 108, 91, 0.5);
+	}
+}
+
+// Hero Section
+.hero {
+	border-radius: 10px;
+	background-image: url(../../assets/imgs/illustration-sign-up-desktop.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+// Email Error Message
+.email--error {
+	display: none;
+	color: $tomato;
+}
+.input--error {
+	width: 95%;
+	height: 40px;
+	padding: 5px 10px;
+	color: $tomato;
+	background-color: hsl(3, 76%, 95%);
+	border: 1px solid $tomato;
+	border-radius: 5px;
+	outline: none;
+	&:focus {
+		border: 1px solid $tomato;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}

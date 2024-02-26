@@ -1,0 +1,42 @@
+@import '../guide.scss';
+
+// Main Card Container
+.main-wrapper {
+	@include flexbox(column, null, null, 20px);
+	width: 380px;
+	height: 380px;
+	padding: 25px;
+	font-family: $primary-font;
+	background-color: $white;
+	border-radius: 25px;
+}
+
+// Card Content
+.success-icon {
+	width: 45px;
+	height: 45px;
+}
+.success__title {
+	margin: 0;
+	font-size: $lg-size;
+	color: $dark-slate-grey;
+}
+.success__message {
+	margin: 0;
+	font-size: $sm-size;
+	line-height: 1.4;
+}
+.dismiss-btn {
+	height: 45px;
+	padding: 10px;
+	font-weight: $bold;
+	color: $white;
+	background-color: $dark-slate-grey;
+	border: none;
+	border-radius: 10px;
+	&:hover {
+		cursor: pointer;
+		background: linear-gradient(to right, #ff586a, rgb(255, 108, 91), $tomato);
+		box-shadow: 0 6px 10px rgba(255, 108, 91, 0.5);
+	}
+}

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(235, 18%, 26%);
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    height: auto;
+    background: hsl(0, 0%, 100%);
+  }
+}
+.main-wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: 320px 2fr;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.hero {
+  grid-area: 1/1/2/2;
+  background-image: url(../../assets/imgs/illustration-sign-up-mobile.svg);
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+
+.sign-up {
+  gap: 20px;
+  padding: 20px;
+}
+
+.sign-up__title {
+  font-size: 4.2rem;
+}
+
+.sign-up__description {
+  font-size: 2rem;
+}
+
+.sign-up__benefits-list {
+  gap: 15px;
+}
+
+.list-item {
+  font-size: 2rem;
+}
+
+.list-icon {
+  align-self: self-start;
+  width: 20px;
+  height: 20px;
+}
+
+.email-label p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.email-input {
+  height: 55px;
+  font-size: 2rem;
+}
+
+.submit-btn {
+  height: 55px;
+  font-size: 1.6rem;
+}
+
+@media screen and (width: 280px) {
+  .main-wrapper {
+    grid-template-rows: 250px 2fr;
+  }
+  .sign-up__title {
+    font-size: 3.6rem;
+  }
+  .sign-up__description, .list-item, .email-input {
+    font-size: 1.6rem;
+  }
+  .email-input, .submit-btn {
+    height: 50px;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */

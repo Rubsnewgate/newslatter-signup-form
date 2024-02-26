@@ -1,0 +1,71 @@
+@import '../guide.scss';
+
+// Main Container
+.main-wrapper {
+	grid-template-columns: 1fr;
+	grid-template-rows: 320px 2fr;
+	width: 100%;
+	height: auto;
+	padding: 0;
+}
+
+// Hero Section
+.hero {
+	grid-area: 1 / 1 / 2 / 2;
+	background-image: url(../../assets/imgs/illustration-sign-up-mobile.svg);
+	background-size: cover;
+	border-radius: 0 0 10px 10px;
+}
+
+// SignUp Section
+.sign-up {
+	gap: 20px;
+	padding: 20px;
+}
+.sign-up__title {
+	font-size: $mb-lg-size;
+}
+.sign-up__description {
+	font-size: $mb-sm-size;
+}
+.sign-up__benefits-list {
+	gap: 15px;
+}
+.list-item {
+	font-size: $mb-sm-size;
+}
+.list-icon {
+	align-self: self-start;
+	width: 20px;
+	height: 20px;
+}
+.email-label {
+	p {
+		margin: 0;
+		font-size: $sm-size;
+	}
+}
+.email-input {
+	height: 55px;
+	font-size: $mb-sm-size;
+}
+.submit-btn {
+	height: 55px;
+	font-size: $sm-size;
+}
+
+// Breakpoints
+@media screen and (width: 280px) {
+	.main-wrapper {
+		grid-template-rows: 250px 2fr;
+	}
+	.sign-up__title {
+		font-size: $lg-size;
+	}
+	.sign-up__description, .list-item, .email-input {
+		font-size: $sm-size;
+	}
+	.email-input, .submit-btn {
+		height: 50px;
+	}
+}
