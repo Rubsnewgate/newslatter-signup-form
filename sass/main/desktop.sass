@@ -1,0 +1,112 @@
+@use '../guide.sass'
+
+// main container
+.main-wrapper
+	display: grid
+	grid-template-columns: 1.1fr 0.9fr
+	width: 650px
+	height: 450px
+	padding: 20px
+	font-family: guide.$primary-font
+	background-color: guide.$white
+	border-radius: 20px
+
+// sign-up section
+.sign-up
+	@include guide.flexbox(column, center, null, 20px)
+	padding-left: 20px
+
+.sign-up__title
+	margin: 0
+	font-size: guide.$lg-size
+	color: guide.$dark-slate-grey
+
+.sign-up__description
+	margin: 0
+	font-size: guide.$sm-size
+	color: guide.$charcoal-grey
+
+.sign-up__benefits-list
+	@include guide.flexbox(column, start, start, 10px)
+	margin: 0
+	padding: 0
+	list-style: none
+
+.list-item
+	@include guide.flexbox(row, start, center, 10px)
+	font-size: guide.$list-size
+	color: guide.$charcoal-grey
+
+.list-icon
+	width: 15px
+	height: 15px
+
+.sign-up__form
+	position: relative
+	@include guide.flexbox(column, start, start, 10px)
+
+.email-label
+	@include guide.flexbox(row, space-between, center, null)
+	width: 94%
+	font-size: guide.$list-size
+	font-weight: guide.$bold
+	color: guide.$dark-slate-grey
+
+.email-input
+	width: 95%
+	height: 40px
+	padding: 5px 10px
+	border: 1px solid guide.$grey
+	border-radius: 5px
+	outline: none
+	&:focus
+		border: 1px solid #000
+
+	&:hover
+		cursor: pointer
+
+.submit-btn
+	width: 95%
+	height: 40px
+	margin-top: 10px
+	font-weight: guide.$bold
+	color: guide.$white
+	background-color: guide.$dark-slate-grey
+	border: none
+	border-radius: 5px
+	&:hover
+		cursor: pointer
+		background: linear-gradient(to right, #ff586a, rgb(255, 108, 91), guide.$tomato)
+		box-shadow: 0 8px 10px rgba(255, 108, 91, 0.5)
+
+// Hero Section
+.hero
+	border-radius: 10px
+	background-image: url(../../assets/imgs/illustration-sign-up-desktop.svg)
+	background-size: contain
+	background-repeat: no-repeat
+
+// email error message
+.email--error
+	position: absolute
+	right: 20px
+	margin: 0
+	font-size: guide.$list-size
+	font-weight: guide.$bold
+	display: none
+	color: guide.$tomato
+
+.input--error
+	width: 95%
+	height: 40px
+	padding: 5px 10px
+	color: guide.$tomato
+	background-color: hsl(3, 76%, 95%)
+	border: 1px solid guide.$tomato
+	border-radius: 5px
+	outline: none
+	&:focus
+		border: 1px solid guide.$tomato
+
+	&:hover
+		cursor: pointer

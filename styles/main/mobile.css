@@ -40,15 +40,12 @@ body {
   gap: 20px;
   padding: 20px;
 }
-
 .sign-up__title {
   font-size: 4.2rem;
 }
-
 .sign-up__description {
   font-size: 2rem;
 }
-
 .sign-up__benefits-list {
   gap: 15px;
 }

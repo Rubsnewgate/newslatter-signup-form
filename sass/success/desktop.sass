@@ -1,0 +1,39 @@
+@use '../guide.sass'
+
+// main card container
+.main-wrapper
+	@include guide.flexbox(column, null, null, 20px)
+	width: 380px
+	height: 380px
+	padding: 25px
+	font-family: guide.$primary-font
+	background-color: guide.$white
+	border-radius: 25px
+
+// Card Content
+.success-icon
+	width: 45px
+	height: 45px
+
+.success__title
+	margin: 0
+	font-size: guide.$lg-size
+	color: guide.$dark-slate-grey
+
+.success__message
+	margin: 0
+	font-size: guide.$sm-size
+	line-height: 1.4
+
+.dismiss-btn
+	height: 45px
+	padding: 10px
+	font-weight: guide.$bold
+	color: guide.$white
+	background-color: guide.$dark-slate-grey
+	border: none
+	border-radius: 10px
+	&:hover
+		cursor: pointer
+		background: linear-gradient(to right, #ff586a, rgb(255, 108, 91), guide.$tomato)
+		box-shadow: 0 6px 10px rgba(255, 108, 91, 0.5)

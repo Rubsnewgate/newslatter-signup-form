@@ -1,0 +1,67 @@
+@use '../guide.sass'
+
+// main container
+.main-wrapper
+	grid-template-columns: 1fr
+	grid-template-rows: 320px 2fr
+	width: 100%
+	height: auto
+	padding: 0
+
+// hero section
+.hero
+	grid-area: 1 / 1 / 2 / 2
+	background-image: url(../../assets/imgs/illustration-sign-up-mobile.svg)
+	background-size: cover
+	border-radius: 0 0 10px 10px
+
+// sign-up section
+.sign-up
+	gap: 20px
+	padding: 20px
+
+	&__title
+		font-size: guide.$mb-lg-size
+
+	&__description
+		font-size: guide.$mb-sm-size
+
+	&__benefits-list
+		gap: 15px
+
+.list-item
+	font-size: guide.$mb-sm-size
+
+.list-icon
+	align-self: self-start
+	width: 20px
+	height: 20px
+
+.email-label
+	font-size: guide.$sm-size
+
+.email-input
+	height: 55px
+	font-size: guide.$mb-sm-size
+
+.submit-btn
+	height: 55px
+	font-size: guide.$sm-size
+
+// email error message
+.email--error
+	font-size: guide.$sm-size
+
+// breakpoints
+@media screen and (width: 280px)
+	.main-wrapper
+		grid-template-rows: 250px 2fr
+
+	.sign-up__title
+		font-size: guide.$lg-size
+
+	.sign-up__description, .list-item, .email-input
+		font-size: guide.$sm-size
+
+	.email-input, .submit-btn
+		height: 50px
